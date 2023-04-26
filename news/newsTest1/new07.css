@@ -1,0 +1,267 @@
+/* --device_detail시작 */
+#device_detail {
+    width: 1920px;
+    height: 1080px;
+
+}
+
+.device_detailTop {
+    height: 50%;
+    background: rgba(255, 220, 123, 0.1);
+
+}
+
+.device_detail_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.device_detail_wrap>p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.device_detail_wrap>h2 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 70px;
+}
+
+
+.device_detail_wrap>ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.device_detail_wrap>ul>li {
+    border: 1px dashed;
+    transition: all 0.2s linear;
+}
+
+.device_detail_wrap>ul>li:hover{
+    transform: scale(1.1);
+}
+
+.device_detail_wrap>ul>li>a {
+    text-decoration: none;
+}
+
+.device_detailBottom {
+    height: 50%;
+}
+
+.device_detail_wrap2 {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.device_detail_wrap2>ul>li {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.device_detail_wrap2>ul>li>div {
+    text-align: center;
+}
+
+.device_detail_wrap2>ul>li>div>p {
+    padding: 20px 0;
+}
+
+/* --device_detail끝 */
+
+
+/* modal */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    overflow: auto;
+    display: none ;
+    justify-content: center;
+    align-items: flex-start;
+   
+}
+
+.modal.modal-show{
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+.modal.modal-hide{
+    animation: fadeOut 0.2s ease-in-out 0.2s forwards;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+.modal-content{
+    position: relative;
+    background-color: #fff;
+    width: 60%;
+    max-height: 75%;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+.modal.modal-show .modal-content{
+    animation: fadeInDown 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeInDown{
+    0%{
+        opacity:0;
+        transform: translateY(-3rem);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+
+.modal.modal-hide .modal-content{
+    animation: fadeOutUp 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeOutUp{
+    0%{
+        opacity:1;
+        transform: translateY(3);
+    }
+    100%{
+        opacity:0;
+        transform: translateY(-3rem);
+    }
+}
+
+.modal-content h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.modal-content p{
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.modal-close{
+    position:absolute;
+    top:0;
+    right: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0 0.75rem;
+    color:rgba(0,0,0,0.2);
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-close:hover, .modal-close:focus{
+    color:rgba(0,0,0,0.5);
+}
+
+/* --추가 */
+.modal:nth-of-type(5) {
+    justify-content: center;
+    align-items: center;
+  }
+  .modal:nth-of-type(5) .modal-content {
+    padding: 0;
+    height: 80%;
+    max-height: 80%;
+    width: auto;
+    max-width: 80%;
+    overflow: visible;
+    border: 3px solid #fff;
+  }
+  .modal:nth-of-type(5) .modal-content img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+  }
+  .modal:nth-of-type(5) .modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    top: -1.5rem;
+    right: -1.5rem;
+    border-radius: 50%;
+    color: #111;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+  }
+  .modal:nth-of-type(5) .modal-close:hover, .modal:nth-of-type(5) .modal-close:focus {
+    color: #111; /* color: rgba(255,0,0,0.5); */
+  }
+  .modal:nth-of-type(5).modal-show .modal-content {
+    animation: zoomIn 0.3s ease-in-out forwards;
+  }
+  .modal:nth-of-type(5).modal-hide .modal-content {
+    animation: zoomOut 0.2s ease-in-out forwards;
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes zoomOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+  }
+
+/* 추가분-- */
+
+
+@media(max-width:992px){
+    html{font-size: 14px;}
+    .modal-content{width:80%;}
+}
+
+@media(max-width:767px){
+    html{font-size: 12px;}
+    .modal-content{padding:2rem 1rem 1rem 1rem;}
+    .modal-content h1{margin-bottom:1.5rem;}
+}

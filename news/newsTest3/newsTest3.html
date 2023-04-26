@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newsTest</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="new01.css">
+    <link rel="stylesheet" type="text/css" href="new02.css">
+    <link rel="stylesheet" type="text/css" href="new03.css">
+    <link rel="stylesheet" type="text/css" href="new04.css">
+    <link rel="stylesheet" type="text/css" href="new05.css">
+    <link rel="stylesheet" type="text/css" href="new06.css">
+    <link rel="stylesheet" type="text/css" href="new07.css">
+
+    <!-- aos효과 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+    <!-- smooth-wrap을 쓰기위한 제이쿼리와 js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <!-- <script src="smoothWrap.js"></script> -->
+
+
+    <!-- <script src="new01.js" defer></script> -->
+    <script src="new02.js" defer></script>
+    <!-- <script src="new03.js" defer></script>
+    <script src="new04.js" defer></script> -->
+    <script type="importmap">
+        {
+            "imports": {
+              "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+              "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
+              "OrbitControls" : "https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+            }
+          }
+    </script>
+    <script src="new05.js" type="module" defer></script>
+    <script src="new07.js" defer></script>
+
+    <link href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+</head>
+
+<body>
+    <!-- <div class="smooth-wrap">
+
+    </div> -->
+
+    <div id="container" class="pg-container">
+        <!-- pages -->
+        <div data-anchor="page-1" id="page-1">
+            <!-- --home -->
+            <div id="hello">
+                <header>
+                    <div class="header_wrap">
+                        <div id="logo">
+                            <a href="index.html">
+                                <img src="../images/Vector.png" alt="logo">
+                            </a>
+                        </div>
+                        <nav>
+                            <ul class="header_titles">
+                                <li>pata</li>
+                                <li>app</li>
+                                <li>device</li>
+                                <li>contact</li>
+                                <li>language</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </header>
+                <main>
+                    <h2 class="mainTxt" data-aos="zoom-in">
+                        함께가는 동반자 당신을 위한 최고의 선택<br>펫터가 함께합니다.
+                    </h2>
+                    <div class="mainHand" data-aos="slide-down">
+                        <img src="../images/mainHand.png" alt="사람손강아지손">
+                    </div>
+                </main>
+            </div>
+            <!-- home-- -->
+        </div>
+        <div data-anchor="page-2" id="page-2">
+            <!-- --introduce -->
+            <div id="pata">
+                <div class="section1">
+                    <div data-aos="slide-right">
+                        <h2 class="pataTxt1">what is</h2>
+                        <div class="pataImg">
+                            <img src="../images/Vector2.png" alt="pataImg">
+                        </div>
+                    </div>
+                    <p class="pataTxt2" data-aos="zoom-in">
+                        동반자를 위한 반려견 솔루션
+                    </p>
+                </div>
+                <div class="section2">
+
+                    <div class="marquee">
+                        <ul class="marquee-content">
+                            <li><img src="../images/슬1.png"></li>
+                            <li><img src="../images/슬2.png"></li>
+                            <li><img src="../images/슬3.png"></li>
+                            <li><img src="../images/슬4.png"></li>
+                            <li><img src="../images/슬5.png"></li>
+                            <li><img src="../images/슬6.png"></li>
+                            <li><img src="../images/슬7.png"></li>
+                            <li><img src="../images/슬8.png"></li>
+                            <li><img src="../images/슬9.png"></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="marquee">
+                        <ul class="marquee-content second">
+                            <li><img src="../images/슬1.png"></li>
+                            <li><img src="../images/슬2.png"></li>
+                            <li><img src="../images/슬3.png"></li>
+                            <li><img src="../images/슬4.png"></li>
+                            <li><img src="../images/슬5.png"></li>
+                            <li><img src="../images/슬6.png"></li>
+                            <li><img src="../images/슬7.png"></li>
+                            <li><img src="../images/슬8.png"></li>
+                            <li><img src="../images/슬9.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- introduce-- -->
+        </div>
+        <div data-anchor="page-3" id="page-3">
+            <!-- --inform -->
+            <div id="news" >
+                <div class="insta1" >
+                    <div class="instaTxts" data-aos="fade-right">
+                        <p class="instaTxt1">디자인부터 아이디어까지</p>
+                        <h2 class="instaTxt2">펫터에서 전하는 소식을<br>인스타그램에서 직접확인해보세요</h2>
+                        <a href="#" class="instaTxt3">바로가기</a>
+                    </div>
+                    <div>
+                        <img src="../images/instagroupImg.png" alt="instaImg">
+                    </div>
+                </div>
+                <div class="insta2" >
+                    <div data-aos="flip-left">
+                        <h2>최신게시물</h2>
+                        <ul>
+                            <!-- <li><img src="../images/flip1.png"></li>
+                        <li><img src="../images/flip2.png"></li>
+                        <li><img src="../images/flip3.png"></li>
+                        <li><img src="../images/flip4.png"></li> -->
+                            <li>
+                                <div class="flip-card-container">
+                                    <div class="flip-card">
+                                        <div class="flip-card-front">
+                                            <img src="../images/flip1.png" alt="대중소">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+                                                recusandae
+                                                quae exercitationem
+                                                <span> albert einstein</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flip-card-container">
+                                    <div class="flip-card">
+                                        <div class="flip-card-front">
+                                            <img src="../images/flip2.png" alt="대중소">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+                                                recusandae
+                                                quae exercitationem
+                                                <span> albert einstein</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="flip-card-container">
+                                    <div class="flip-card">
+                                        <div class="flip-card-front">
+                                            <img src="../images/flip3.png" alt="대중소">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+                                                recusandae
+                                                quae exercitationem
+                                                <span> albert einstein</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flip-card-container">
+                                    <div class="flip-card">
+                                        <div class="flip-card-front">
+                                            <img src="../images/flip4.png" alt="대중소">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+                                                recusandae
+                                                quae exercitationem
+                                                <span> albert einstein</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- inform-- -->
+        </div>
+        <div data-anchor="page-4" id="page-4">
+            <!-- --app -->
+            <div id="app">
+                <div class="app-text" data-aos="fade-right">
+                    <h2>
+                        반려견의 건강<br>
+                        스마트하게 확인하세요
+                    </h2>
+
+                    <ul>
+                        <li>turn tables quicker</li>
+                        <li>increase average spend</li>
+                        <li>get more tips</li>
+                        <li>save time,save money</li>
+                    </ul>
+                </div>
+                <div class="app-img" data-aos="slide-left">
+                    <div class="my-element card" >
+                        <img src="../images/appImg1.png" alt="appImg1">
+
+                    </div>
+                    <div class="my-element2 card">
+                        <img src="../images/appImg2.png" alt="appImg2">
+
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+            <script>
+                VanillaTilt.init(document.querySelectorAll(".card"), {
+                    max: 25,
+                    speed: 400,
+                    scale: 1.2
+
+                });
+            </script>
+            <!-- app-- -->
+        </div>
+        <div data-anchor="page-5" id="page-5">
+            <!-- --app_detail -->
+            <div id="app_detail">
+                <div class="app_detail_wrap">
+
+                    <div class="app_detailTxt" data-aos="fade-right">
+
+
+                        <h2>
+                            the fastest way
+                            in the world to pay
+                            in restaurants
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Maiores corrupti possimus placeat dolores,
+                            ducimus suscipit autem illo fuga modi laudantium voluptas quaerat sint nemo unde accusamus
+                            cum
+                            nihil, ex alias!
+                        </p>
+
+
+                    </div>
+                    
+                    <div class="app_detailImg" data-aos="fade-left">
+                        <!-- <img src="../images/app_detailImg.png" alt="app_detailImg"> -->
+                        <section id="slider">
+                            <input type="radio" name="slider" id="s1">
+                            <input type="radio" name="slider" id="s2">
+                            <input type="radio" name="slider" id="s3" checked>
+                            <input type="radio" name="slider" id="s4">
+                            <input type="radio" name="slider" id="s5">
+
+                            <label for="s1" id="slide1">
+                                <img src="/images/introAppRecode.png">
+                            </label>
+                            <label for="s2" id="slide2">
+                                <img src="/images/introAppMap.png">
+                            </label>
+                            <label for="s3" id="slide3">
+                                <img src="/images/introAppMain.png">
+                            </label>
+                            <label for="s4" id="slide4">
+                                <img src="/images/introAppResult.png">
+                            </label>
+                            <label for="s5" id="slide5">
+                                <img src="/images/introAppWalk.png">
+                            </label>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- app-detail-- -->
+        </div>
+        <div data-anchor="page-6" id="page-6">
+            <!-- --device -->
+            <div id="device">
+                <div class="dogImg" data-aos="zoom-out-right">
+                    <img src="../images/deviceDogImg.png" alt="deviceDogImg">
+                </div>
+                <div class="deviceTxt">
+                    <div data-aos="slide-right">
+                        <h2>
+                            H5<br>
+                            VAPOUR
+                        </h2>
+                        <p>
+                            c250
+                        </p>
+                        <p>
+                            buynow
+                        </p>
+                    </div>
+                    <div>
+                        <ul class="verticalTxt" data-aos="slide-down">
+                            <li class="vT1">목걸이</li>
+                            <li class="vT2">목걸이 새거</li>
+                            <li class="vT3">목걸이 새로글자</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="deviceImg" data-aos="zoom-in-down">
+                    <canvas id="canvas" width="1000" height="1000"></canvas>
+                </div>
+            </div>
+            <!-- device-- -->
+        </div>
+        <div data-anchor="page-7" id="page-7">
+            <!-- --device_detail -->
+            <div id="device_detail">
+                <div class="device_detailTop">
+                    <div class="device_detail_wrap" >
+
+                        <p data-aos="fade-down">save up to 30% on smart devices</p>
+                        <h2 data-aos="fade-down">다양한 견종별 착용모습을 확인하세요</h2>
+                        <ul data-aos="zoom-in">
+                            <li data-modal-target="modal1">
+                                <a href="#">
+                                    <img src="../images/dogs1.png" alt="dogs">
+                                </a>
+                            </li>
+                            <li data-modal-target="modal2">
+                                <a href="#">
+                                    <img src="../images/dogs2.png" alt="dogs">
+                                </a>
+                            </li>
+                            <li data-modal-target="modal3">
+                                <a href="#">
+                                    <img src="../images/dogs3.png" alt="dogs">
+                                </a>
+                            </li>
+                            <li data-modal-target="modal5">
+                                <a href="#">
+                                    <img src="../images/dogs4.png" alt="dogs">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="device_detailBottom" data-aos="fade-up">
+                    <div class="device_detail_wrap2">
+
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="../images/icon1.png">
+                                    <p>somthing
+                                        in your mind</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="../images/icon2.png">
+                                    <p>somthing
+                                        in your mind</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="../images/icon3.png">
+                                    <p>somthing
+                                        in your mind</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="../images/icon4.png">
+                                    <p>somthing
+                                        in your mind</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal" id="modal1">
+                <div class="modal-content">
+
+                    <span class="modal-close">&times;</span>
+                    <h1>Modal Title1</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sapiente, nostrum
+                        excepturi ea
+                        mollitia totam.</p>
+                    <p>Rerum officia soluta molestiae earum placeat, illum, inventore in delectus excepturi ipsa sequi,
+                        veniam
+                        velit!</p>
+                    <p>Doloremque optio quibusdam officiis repellat adipisci corrupti totam, cumque, molestias, voluptas
+                        dolore
+                        mollitia doloribus eos!</p>
+
+
+                </div>
+            </div>
+            <div class="modal" id="modal2">
+                <div class="modal-content">
+
+                    <span class="modal-close">&times;</span>
+                    <h1>Modal Title2</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sapiente, nostrum
+                        excepturi ea
+                        mollitia totam.</p>
+                    <p>Rerum officia soluta molestiae earum placeat, illum, inventore in delectus excepturi ipsa sequi,
+                        veniam
+                        velit!</p>
+                    <p>Doloremque optio quibusdam officiis repellat adipisci corrupti totam, cumque, molestias, voluptas
+                        dolore
+                        mollitia doloribus eos!</p>
+
+
+                </div>
+            </div>
+            <div class="modal" id="modal3">
+                <div class="modal-content">
+
+                    <span class="modal-close">&times;</span>
+                    <h1>Modal Title3</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sapiente, nostrum
+                        excepturi ea
+                        mollitia totam.</p>
+                    <p>Rerum officia soluta molestiae earum placeat, illum, inventore in delectus excepturi ipsa sequi,
+                        veniam
+                        velit!</p>
+                    <p>Doloremque optio quibusdam officiis repellat adipisci corrupti totam, cumque, molestias, voluptas
+                        dolore
+                        mollitia doloribus eos!</p>
+
+
+                </div>
+            </div>
+
+            <div class="modal" id="modal5">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <img src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                        alt="elephants">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        new Pageable("#container", {
+            animation: 1000,
+            freeScroll: true
+        });
+    </script>
+
+    <!-- aos 자바 스크립트 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 0,
+            duration: 2000
+        });
+    </script>
+    <script>
+        // aos.js랑 pageable.js랑 충돌하는데 해당코드는 그걸 해결해준다. 킹갓 인도인이 해결해주었다.
+        document.addEventListener('scroll', (event) => {
+            const aosAnimation = document.querySelectorAll('[data-aos]');
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio > 0) {
+                        entry.target.classList.add('aos-animate');
+                    } else {
+                        entry.target.classList.remove('aos-animate');
+                    }
+                });
+            });
+            aosAnimation.forEach(aosObject => {
+                observer.observe(aosObject);
+            });
+        }, { capture: true, passive: true, })
+
+        
+    </script>
+</body>
+
+</html>

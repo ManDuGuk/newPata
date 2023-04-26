@@ -1,0 +1,173 @@
+/* --공통 */
+
+html {
+    /*  smooth-wrap처리를 하면 div를 기준으로 처리가 되기때문에 html상의 스크롤 ui는 숨김처리 해준다. */
+    overflow: auto;
+
+    /* 이건 링크를 타고 날아갈시 부드럽게 전환되도록 해주는 효과이다. 자세한건 코딩저니 영상 참조 */
+    --scroll-behavior: smooth;
+}
+
+/* 폰트 */
+h2 {
+    font-family: 'Gowun Batang', serif;
+}
+
+/* 공통-- */
+
+
+/* --news시작 */
+#news {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+}
+
+.insta1 {
+
+    display: flex;
+    height: 50%;
+    background-color: #FFDC7B1A;
+    padding-left: 300px;
+    padding-top: 100px;
+    gap: 174px;
+
+}
+
+.instaTxts {
+    padding-top: 100px;
+}
+
+.instaTxt1 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.instaTxt2 {
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.instaTxt3 {
+    background-color: #67CAD5;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.insta2 {
+    width: 100%;
+    --margin-left: 300px;
+    height: 50%;
+    --text-align: center;
+}
+
+.insta2>div{
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.insta2 h2 {
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.insta2 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* --news끝 */
+
+/* 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.flip-card-container{
+   
+    width: 287px;
+    height: 309px;
+    --border: 1px solid #ccc;
+    perspective: 1000px;
+}
+
+.flip-card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,.flip-card-back{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --font-size: 2rem;
+}
+
+.flip-card-front{
+    --background-color: #333;
+    --color:#fff;
+}
+
+.flip-card-back{
+
+    background-color: #517fa4;
+    border-radius: 10px;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img{
+    --width: 100%;
+    --height: 100%;
+}
+
+.flip-card-back p{
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.4rem;
+    line-height: 1,5rem;
+}
+
+.flip-card-back p span{
+    display:block;
+    font-size:1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 1.25rem;
+}

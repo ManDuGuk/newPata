@@ -1,0 +1,204 @@
+/* --공통 */
+
+html {
+    /*  smooth-wrap처리를 하면 div를 기준으로 처리가 되기때문에 html상의 스크롤 ui는 숨김처리 해준다. */
+    overflow: auto;
+
+    /* 이건 링크를 타고 날아갈시 부드럽게 전환되도록 해주는 효과이다. 자세한건 코딩저니 영상 참조 */
+    --scroll-behavior: smooth;
+}
+
+/* 폰트 */
+h2 {
+    font-family: 'Gowun Batang', serif;
+}
+
+/* 공통-- */
+
+/* --pata시작 */
+#pata {
+    width: 1920px;
+    height: 1080px;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: row;
+}
+
+.section1 {
+    width: 60%;
+    height: 1080px;
+    display: flex;
+    padding: 0px;
+    gap: 150px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.pataTxt1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 124px;
+    color: #1A5F8F;
+}
+
+.pataImg>img {
+    width: 818px;
+    height: 227px;
+}
+
+.pataTxt2 {
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.section2 {
+    width: 40%;
+    display: flex;
+    gap: 50px;
+
+}
+
+
+/* --pata끝 */
+
+/* --mqrquee */
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #111;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+*/
+
+:root {
+    --marquee-width: 300px;
+    --marquee-height: 1080px;
+    /* --marquee-elements: 12; */
+    /* defined with JavaScript */
+    --marquee-elements-displayed: 3;
+    /* : calc(var(--marquee-width) / var(--marquee-elements-displayed)); */
+    --marquee-element-width: 300px;
+    --marquee-element-height: calc(var(--marquee-height) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 5s);
+}
+
+.marquee {
+    
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    --background-color: #111;
+    border: 1px dashed black;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 
+.marquee:before,
+.marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+} */
+
+.marquee-content {
+    list-style: none;
+    height: 100%;                       
+    display: flex;
+    flex-direction: column;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+.marquee-content.second{
+    flex-direction: column-reverse;
+    animation: scrolling-down var(--marquee-animation-duration) linear infinite;
+    
+}
+
+/* .marquee-content:hover {
+    animation-play-state: paused;
+  } */
+
+@keyframes scrolling {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(calc(-1 * var(--marquee-element-height) * var(--marquee-elements)));
+    }
+}
+
+@keyframes scrolling-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(calc(1 * var(--marquee-element-height) * var(--marquee-elements)));
+    }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    height: var(--marquee-element-height);
+    --max-height: 100%;
+    font-size: calc(var(--marquee-element-height)*3/4);
+    /* 5rem; */
+    white-space: nowrap;
+   
+}
+
+.marquee-content li img {
+    --width: 100%;
+    height: 95%;
+    --border: 2px solid #eee;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+    }
+
+    .marquee:before,
+    .marquee:after {
+        width: 5rem;
+    }
+}
+
+/* mqrquee-- */

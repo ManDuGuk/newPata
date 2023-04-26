@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* 폰트 */
+h2{
+    font-family: 'Gowun Batang', serif;
+}
+
+/* --헤더시작-- */
+#hello {
+    width: 1920px;
+    height: 1080px;
+    background: rgba(255, 205, 66, 0.7);
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    
+}
+
+#logo {
+    padding-left: 50px;
+}
+
+#logo>a>img {
+    width: 100px;
+}
+
+
+
+.header_titles {
+    display: flex;
+    padding-right: 50px;
+    align-items: center;
+    
+}
+
+.header_titles>li {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 400;
+    font-size: 24px;
+    --line-height: 35px;
+}
+
+/* --헤더끝-- */
+
+/* --몸통시작-- */
+/* --indext시작-- */
+.mainTxt {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    /* 애니메이션 */
+    height: 40px;
+    overflow: hidden;
+}
+
+/* 애니메이션 */
+.mainTxt div{
+    margin-bottom: 40px;
+    
+}
+
+.mainTxt div:first-child{
+    animation: show 10s linear infinite;
+}
+
+.mainHand {
+    width: 100%;
+}
+@keyframes show{
+    
+    0% {margin-top:-160px;}
+    30%{margin-top:-160px;}
+    33% {margin-top:-80px;} 
+    63%{margin-top:-80px;} 
+    66%{margin-top:0px;} 
+    99%{margin-top:0px;}
+    100%{margin-top:-160px;}  
+}
+
+
+
+/* --index끝-- */

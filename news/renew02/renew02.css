@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+/*
+ 페이지가 스크롤 되지 않고 딱 맞춰서 나와주게 하기위해
+해당처리가 필요하다.
+아래 처리없이 그냥 테스트해보면 html이 body영역과 다르게 일정영역을 잡아먹고 있음을 알수있다.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+기본 폰트 사이즈는 16px이다. 이를 10px로 변환시켜(그냥 font-size를 10px이라고하면 고정되어버린다.)
+rem를 변하게 쓰기위한 세팅을 해준다.
+*/
+html{
+    background-color: black;
+    font-size: 62.5%;
+}
+
+/* 바디영역을 애초에 작게 설정해 가운데로 중앙정렬했다. */
+body {
+    min-height: 100vh;
+    max-width: 70vw;
+    margin: 0 auto;
+    background-color: white;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------- */
+
+
+/* --pata시작 */
+#pata {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    --gap: 1.5rem;
+}
+
+.section1 {
+    
+    --flex-shrink: 1;
+    width: 50%;
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.pataTxt1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8rem;
+    color: #1A5F8F;
+}
+
+.pataImg>img {
+    width: 70%;
+    min-width: 32rem;
+    max-width: 37.5rem;
+    height: auto;
+}
+
+.pataTxt2 {
+    font-weight: 400;
+    font-size: 3.1rem;
+}
+
+.section2 {
+    padding-right: 1rem;
+    --flex-shrink: 0;
+    width: 50%;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+
+}
+
+
+/* --pata끝 */
+
+/* --mqrquee */
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #111;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+*/
+
+:root {
+    --marquee-width: 20rem;
+    --marquee-height: 108rem;
+    /* --marquee-elements: 12; */
+    /* defined with JavaScript */
+    --marquee-elements-displayed: 3;
+    /* : calc(var(--marquee-width) / var(--marquee-elements-displayed)); */
+    --marquee-element-width: 20rem;
+    --marquee-element-height: calc(var(--marquee-height) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 5s);
+}
+
+.marquee {
+    
+    --width: var(--marquee-width);
+    height: var(--marquee-height);
+    --background-color: #111;
+    --border: 1px dashed black;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 
+.marquee:before,
+.marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+} */
+
+.marquee-content {
+    list-style: none;
+    height: 100%;                       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+.marquee-content.second{
+    flex-direction: column-reverse;
+    animation: scrolling-down var(--marquee-animation-duration) linear infinite;
+    
+}
+
+/* .marquee-content:hover {
+    animation-play-state: paused;
+  } */
+
+@keyframes scrolling {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(calc(-1 * var(--marquee-element-height) * var(--marquee-elements)));
+    }
+}
+
+@keyframes scrolling-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(calc(1 * var(--marquee-element-height) * var(--marquee-elements)));
+    }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    --width: var(--marquee-width);
+    height: var(--marquee-element-height);
+    --max-height: 100%;
+    font-size: calc(var(--marquee-element-height)*3/4);
+    /* 5rem; */
+    white-space: nowrap;
+   
+}
+
+.marquee-content li img {
+    max-height: 90%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+    }
+
+    .marquee:before,
+    .marquee:after {
+        width: 5rem;
+    }
+}
+
+/* mqrquee-- */

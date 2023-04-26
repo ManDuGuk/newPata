@@ -1,0 +1,1864 @@
+@charset "utf-8";
+
+/* 웹 FHD 1920 기준 HD(1280) ~ QHD(2560) 지원 */
+
+/*
+ 페이지가 스크롤 되지 않고 딱 맞춰서 나와주게 하기위해
+해당처리가 필요하다.
+아래 처리없이 그냥 테스트해보면 html이 body영역과 다르게 일정영역을 잡아먹고 있음을 알수있다.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+    /* 폰트 */
+    /* 기본 폰트 사이즈는 16px이다. 이를 10px로 변환시켜(그냥 font-size를 10px이라고하면 고정되어버린다.)
+    rem를 변하게 쓰기위한 세팅을 해준다.*/
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 62.5%;
+    color: #195e8e;
+    --color: #fff;
+}
+
+html {
+
+    /* 펫터 색상 */
+    background-color: #ffcd42;
+    background-color: rgba(255, 205, 66, 0.7);
+    --color: #195e8e;
+
+
+    background-color: #FFF5D6;
+    --color: #676D72;
+
+
+    background-color: #FAF2DD;
+    --color: #1A5F8F;
+
+
+    background-color: #FBF7EE;
+    --color: #1A5F8F;
+
+
+    background-color: #fff;
+    /* 조금 차가운 회색 */
+    --background-color: #F8F8FA;
+    /* 조금 따듯 회색 */
+    --background-color: #F9F9F9;
+    /* 위에꺼랑 별차이 모르겠음 */
+    --background-color: #FAFAFA;
+
+    --text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+}
+
+/* 바디영역을 애초에 작게 설정해 가운데로 중앙정렬했다. */
+body {
+    --overflow: hidden !important;
+    position: relative;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* 폰트크기 QHD이상 */
+h2 {
+    font-size: 4rem;
+    font-weight: 700;
+   
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+a {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+li {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+i {
+    font-size: 1.8rem;
+}
+
+
+
+@media (min-width:1280px) and (max-width:2560px) {
+
+    :root {
+        --font-size-lg: clamp(2.8rem, 2vw, 4rem);
+        --font-size-md: clamp(1.8rem, 1.1vw, 2.4rem);
+        --font-size-sm: clamp(1.3rem, 1vw, 1.8rem);
+    }
+
+    h1 {
+        font-size: var(--font-size-lg);
+    }
+
+    h2 {
+        font-size: var(--font-size-lg);
+        font-weight: 700;
+
+    }
+
+    h3 {
+        font-size: var(--font-size-md);
+        font-weight: 700;
+    }
+
+    p {
+        font-size: var(--font-size-sm);
+        font-weight: 400;
+    }
+
+    a {
+        font-size: var(--font-size-sm);
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    li {
+        font-size: var(--font-size-sm);
+        font-weight: 400;
+    }
+
+    i {
+        font-size: var(--font-size-sm);
+    }
+
+}
+
+.wrapper {
+    min-height: 100%;
+    max-width: 50%;
+    --min-width: 1024px;
+    margin: 0 auto;
+    --background-color: #fff
+}
+
+.wrapper_with_img {
+
+    min-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.flex_with_img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 3%;
+}
+
+
+
+.flex_with_left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex_with_left img{
+   
+    position: relative;
+    --bottom: 5%;
+    max-height: 80%;
+    max-width: 80%;
+    height: auto;
+    width: auto;
+    margin-top: auto;
+   
+}
+.flex_with_right{
+    width: 50%;
+    height: 100%;
+}
+
+/* --------------------------------------- */
+
+
+.navbar {
+    --background-color: antiquewhite;
+    box-sizing: border-box;
+    height: 5vh;
+    max-height: 5rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.logo {
+    width: 10%;
+    height: 100%;
+}
+
+.logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.navbar div {
+    width: 50%;
+    vertical-align: middle;
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+/* navbar-- */
+
+/* --컨텐츠 */
+
+
+#page-1 {
+    --background-color: rgba(255, 205, 66, 0.7);
+    color: #195e8e;
+}
+
+.move {
+    --background-color: rgba(255, 205, 66, 0.7);
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    justify-content: center;
+}
+
+
+.title {
+
+    color: #195e8e;
+    --background: rgba(255, 205, 66, 0.7);
+    --text-shadow: 2px 2px 0 #fff, 2px -2px 0#fff, -2px 2px 0#fff, -2px -2px 0 #fff, 2px 0px 0 #FFF, 0px 2px 0 #FFF, -2px 0px 0 #FFF, 0px -2px 0 #FFF;
+
+    --color: black;
+    text-align: center;
+    height: 20%;
+
+}
+
+.title_img {
+
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.title_img img {
+    --width: 100vw;
+    max-height: 100%;
+    width: auto;
+    margin-top: calc(2vw);
+    --margin-left: calc(-50vw + 50%);
+
+}
+
+/* 컨텐츠-- */
+
+
+/* PC FHD 이하  (해상도 1280px ~ , )*/
+/* 미디어 쿼리에 적용되는 rem은 16px을 기준으로 적용된다. 왜그런지는 잘 모르겠다. */
+
+/* @media all and (min-width:1270px) and (max-width:1919px) {
+    .section_wrap {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+} */
+
+/* PC FHD 이상  (해상도 1920px ~ , )*/
+
+/* @media all and (min-width:1921px) {
+    .section_wrap {
+        width: 100vw;
+        height: 100vh;
+    }
+} */
+
+
+/* 반응형-- */
+
+/* ---------------------------------------------------------------------------- */
+
+
+/* --pata시작 */
+#pata {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    --gap: 1.5rem;
+}
+
+.section1 {
+
+    --flex-shrink: 1;
+    width: 50%;
+    display: flex;
+    gap: 10%;
+    flex-direction: column;
+    justify-content: center;
+    --padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.pataImg>img {
+    width: 70%;
+    min-width: 32rem;
+    max-width: 37.5rem;
+    height: auto;
+}
+
+.section2 {
+    width: 50%;
+    --display: flex;
+    --gap: 5%;
+    --justify-content: center;
+
+}
+
+.section_wrap {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    margin-left: auto;
+}
+
+
+/* --pata끝 */
+
+/* --mqrquee */
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    color: #111;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+*/
+
+:root {
+    --marquee-width: 20rem;
+    --marquee-height: 108rem;
+    /* --marquee-elements: 12; */
+    /* defined with JavaScript */
+    --marquee-elements-displayed: 4;
+    /* : calc(var(--marquee-width) / var(--marquee-elements-displayed)); */
+    --marquee-element-width: 20rem;
+    --marquee-element-height: calc(var(--marquee-height) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 5s);
+}
+
+.marquee {
+
+    --width: var(--marquee-width);
+    height: var(--marquee-height);
+    --background-color: #111;
+    --border: 1px dashed black;
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 
+.marquee:before,
+.marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+
+.marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #111 0%, transparent 100%);
+} */
+
+.marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+.marquee-content.second {
+    flex-direction: column-reverse;
+    animation: scrolling-down var(--marquee-animation-duration) linear infinite;
+
+}
+
+/* .marquee-content:hover {
+    animation-play-state: paused;
+  } */
+
+@keyframes scrolling {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(calc(-1 * var(--marquee-element-height) * var(--marquee-elements)));
+    }
+}
+
+@keyframes scrolling-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(calc(1 * var(--marquee-element-height) * var(--marquee-elements)));
+    }
+}
+
+.marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    --width: var(--marquee-width);
+    height: var(--marquee-element-height);
+    --max-height: 100%;
+    font-size: calc(var(--marquee-element-height)*3/4);
+    /* 5rem; */
+    white-space: nowrap;
+
+}
+
+.marquee-content li img {
+    max-height: 90%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+
+}
+
+@media (max-width: 600px) {
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 16vh;
+        --marquee-elements-displayed: 3;
+    }
+
+    .marquee:before,
+    .marquee:after {
+        width: 5rem;
+    }
+}
+
+/* mqrquee-- */
+
+/* ---------------------------------------------------------------------- */
+
+
+/* --news시작 */
+#news {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+}
+
+.insta1 {
+    height: 30%;
+    --background-color: #FFDC7B1A;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.instaTxts {
+    width: 50%;
+    height: 100%;
+    margin: auto 0;
+}
+
+.instaTxt1 {
+    margin-bottom: 1rem;
+}
+
+
+.instaTxt2 {
+    margin-bottom: 3rem;
+}
+
+.instaTxt3 {
+    background-color: #67CAD5;
+    border-radius: 2.8rem;
+    border: 0.1rem solid black;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 1.3rem;
+    padding: 1.6rem 3.1rem;
+    text-decoration: none;
+    text-shadow: 0rem 0.1rem 0rem black;
+}
+
+.instaimg {
+    width: 50%;
+    height: 80%;
+    --margin: auto 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.instaimg img {
+    border-radius: 3%;
+    display: inline-block;
+    --margin-left: auto;
+    width: 90%;
+    height: auto;
+
+}
+
+
+.insta2 {
+    height: 30%;
+
+}
+
+
+
+.insta2 ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.insta2 li {
+    width: 20%;
+
+}
+
+
+.flip-card-container {
+    width: 100%;
+    max-width: 30rem;
+    height: 100%;
+    max-height: 30rem;
+    --border: 1px solid #ccc;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    border: 1 black;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --font-size: 2rem;
+}
+
+.flip-card-front {
+    --background-color: #333;
+    --color: #fff;
+}
+
+.flip-card-back {
+
+    background-color: #517fa4;
+    border-radius: 10px;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.flip-card-back p {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.4rem;
+    line-height: 1, 5rem;
+}
+
+.flip-card-back p span {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 1.25rem;
+}
+
+/* ----------------------------------------------------------------------- */
+
+
+/* --app시작-- */
+
+#page-4 {
+    --background-image: url(../images/appBackground.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+
+.app-text {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    --justify-content: space-between;
+    margin: auto 0;
+}
+
+.app-text>h2 {
+    --margin-bottom: 10%;
+}
+
+.app-text>ul{
+    --margin-bottom: 20%;
+}
+.app-text>ul>li {
+    background-image: url("../images/listPaw.png");
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    Background-size: 6%;
+}
+
+.app-img {
+    width: 50%;
+    height: 50%;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+}
+
+.my-element {
+    width: 50%;
+    text-align: center;
+}
+
+.my-element img {
+    max-width: 80%;
+    height: auto;
+}
+
+.my-element2 {
+    width: 50%;
+    text-align: center;
+}
+
+.my-element2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --app끝 */
+
+
+
+/* ------------------------------------------------------------- */
+
+/* --app_detail시작 */
+#app_detail {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.app_detailTxt {
+    width: 50%;
+    height: fit-content;
+    margin: auto 0;
+}
+
+.app_detailTxt>h2 {
+    --width: 60%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.app_detailTxt>p {
+    --width: 60%;
+    margin: 0 auto;
+}
+
+.app_detailImg {
+    width: 50%;
+    height: 50%;
+    margin: auto 0;
+
+}
+
+[type=radio] {
+    display: none;
+}
+
+#slider {
+    width: 80%;
+    margin-left: auto;
+    height: 100%;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#slider label {
+    margin: auto;
+    width: fit-content;
+    height: 100%;
+    --border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+#slider img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    --backface-visibility: hidden;
+}
+
+
+/* 아래 css들은 생각보다 간단하다. */
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37); */
+    transform: translate3d(-30%, 0, -200px);
+}
+
+/* 
+  체크를 가운데에서 왼쪽으로 +1된것이다.
+  체크가 왼쪽으로 +1이 되면 원형슬라이드는 오른쪽으로 +1이동한것과 마찬가지이다.
+  즉 왼편에 있던 2번 박스가 3번박스를 오른쪽으로 밀어내고 가운데로 오게되는것
+  다른 모든 박스들도 그렇게 한칸씩이동시킨다.
+  */
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+    /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2); */
+    transform: translate3d(-15%, 0, -100px);
+}
+
+/* 
+  가운데 있는 체크박스 상자를 기준으로 체크된 상자가 0,0,0의 위치로 오도록 만드는것이다
+  체크된 체크와 박스가 일치하면된다.
+  */
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+    /* box-shadow: 0 13px 25px 0 rgba(0, 0, 0, .3), 0 11px 7px 0 rgba(0, 0, 0, .19); */
+    transform: translate3d(0, 0, 0);
+}
+
+/* 
+  체크를 가운데에서 오른쪽으로 +1된것이다.
+  체크가 오른쪽으로 +1이 되면 원형슬라이드는 왼쪽편으로 +1이동한것과 마찬가지이다.
+  즉 오른편에 있던 4번 박스가 3번박스를 왼쪽으로 밀어내고 가운데로 오게되는것
+  다른 모든 박스들도 그렇게 한칸씩이동시킨다.
+  */
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+    /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2); */
+    transform: translate3d(15%, 0, -100px);
+}
+
+/* 
+  체크를 가운데에서 오른쪽으로 +2된것이다.
+  체크가 오른쪽으로 +2이 되면 원형슬라이드는 왼쪽편으로 +2이동한것과 마찬가지이다.
+  즉 오른편에 있던 4번 박스가 3번박스를 왼쪽으로 2밀어내고 가운데로 오게되는것
+  다른 모든 박스들도 그렇게 한칸씩이동시킨다.
+  */
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37); */
+    transform: translate3d(30%, 0, -200px);
+
+}
+
+/* ----------------------------------------------------------------------- */
+
+
+/* --device시작-- */
+#device {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+
+}
+
+.dogImg {
+    width: calc(100%/3);
+    height: 80%;
+    margin: auto 0;
+}
+
+
+.dogImg ul {
+
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.dogImg li {
+    height: fit-content;
+}
+
+
+
+.dogImg img {
+    border-radius: 3%;
+    max-width: 100%;
+    height: auto;
+}
+
+.device_right {
+    width: calc(2*(100%/3));
+    display: flex;
+
+
+}
+
+.deviceTxt {
+    --width: calc(100%/3);
+    width: 50%;
+    height: fit-content;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-shrink: 1;
+}
+
+.deviceTxt>div>h2 {
+    line-height: 5rem;
+    margin-bottom: 3rem;
+}
+
+.deviceTxt>div>p {
+
+    line-height: 4.4rem;
+    padding-bottom: 3rem;
+}
+
+.verticalTxt {
+    display: flex;
+    gap: 2rem;
+}
+
+.verticalTxt>li {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+
+
+}
+
+.verticalTxt>li:nth-child(1) {
+    text-indent: 4rem;
+}
+
+.verticalTxt>li:nth-child(2) {
+    text-indent: 7rem;
+}
+
+.verticalTxt>li:nth-child(3) {
+    text-indent: 10rem;
+}
+
+.deviceImg {
+    --background-color: antiquewhite;
+    --width: calc(100%/3);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.deviceImg>canvas {
+
+    border: 0.1rem solid rgba(25, 94, 142, 0.5);
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+
+
+
+}
+
+/* --device끝 */
+
+/* ------------------------------------------------------------------------ */
+
+/* --device_detail시작 */
+#device_detail {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+/* 
+.device_detailleft {
+    width: 50%;
+    height: 50%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    --gap: 15%;
+   
+}
+
+.device_detailleft ul {
+    display: flex;
+    --justify-content: center;
+    gap: 2%;
+}
+
+.device_detailleft li {
+    --width: 25%;
+    transition: all 0.2s linear;
+    text-align: center;
+}
+
+.device_detailleft li:hover {
+    transform: scale(1.2);
+} */
+
+.device_detailleft {
+    width: 50%;
+    height: 90%;
+    margin: auto 0;
+
+}
+
+.device_detailleft>div {
+    padding: 5%;
+    height: calc(100%/3);
+
+
+}
+
+.detail_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.device_detailleft ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.device_detailleft li {
+    --width: 25%;
+    transition: all 0.2s linear;
+    text-align: center;
+}
+
+.device_detailleft li:hover {
+    transform: scale(1.2);
+}
+
+
+
+.device_detailleft img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.device_detailright {
+    width: 50%;
+    height: 90%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.device_detailright div {
+    padding: 5% 0 5% 5%;
+    height: calc(100%/3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.device_detailright img {
+
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 3%;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+}
+
+/* --device_detail끝 */
+
+/* footer시작 */
+
+#footer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#footer * {
+    opacity: 97%;
+}
+
+.footer_left {
+    width: 40%;
+    height: 70%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer_left ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+}
+
+.footer_left li {
+    width: 30%;
+    padding: 1% 1% 1% 0;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #ffcd42;
+    text-underline-offset: 0.7rem;
+    text-decoration-thickness: 0.15rem;
+}
+
+
+.footer_right {
+
+    width: 40%;
+    height: 70%;
+    margin: auto 0;
+    padding-left: 10%;
+}
+
+.footer_right span>img {
+    max-height: 3.2rem;
+    width: auto;
+}
+
+.footer_right h2 {
+    padding-bottom: 5%;
+    line-height: 200%;
+}
+
+.footer_right a>img {
+    position: relative;
+    left: -0.8rem;
+    max-height: 6rem;
+    width: auto;
+}
+
+/* footer 끝 */
+
+/* pata_detail시작 */
+#pata_detail {
+    width: 100;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.detail_nav {
+    width: 10%;
+    height: 35%;
+    --margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 26%;
+    --justify-content: center;
+}
+
+.detail_nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail_contents {
+    width: 70%;
+    height: fit-content;
+    --margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 25%;
+}
+
+.contents_top {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.move_txt {
+    position: absolute;
+    top: 5%;
+    z-index: -1;
+}
+
+.contents_bottom {
+    height: fit-content;
+    display: flex;
+}
+
+.bottom_left {
+    --background-color: #195e8e;
+    width: 30%;
+    height: 100%;
+    padding-top: 5%;
+}
+
+.bottom_left img {
+    border-radius: 3%;
+    max-width: 100%;
+    height: auto;
+}
+
+.bottom_right {
+  
+    position: relative;
+    
+    width: 70%;
+    height: 100%;
+    padding: 2% 0 5% 5%;
+}
+
+.bottom_right h2 {
+    padding-bottom: 5%;
+    
+}
+
+/* ptat_detail끝 */
+
+
+/* ----------------------------------------------------------------------- */
+.pg-pips {
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pg-pips ul li a span {
+    background: darkblue;
+}
+
+.pg-pips li {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 16px;
+    position: relative;
+}
+
+.pg-pips span:after {
+    background: rgba(4, 6, 146, 0.15);
+    position: absolute;
+    content: "";
+    display: block;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.pg-pips li .active span {
+    background: darkblue;
+    position: absolute;
+}
+
+.pg-pips li .active span:after {
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+}
+
+.pg-pips ul {
+    margin: 0;
+    padding: 0;
+}
+
+.pg-pips ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+}
+
+.pg-pips ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pg-pips ul li a.active span,
+.pg-pips ul li:hover a.active span {
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+}
+
+.pg-pips ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: darkblue;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    transition: all 0.1s ease-in-out;
+}
+
+.pg-pips ul li:hover a span {
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+
+.pg-wrapper.pg-vertical {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+
+
+
+/* 태블릿 가로 1024 ~ 작은태블릿 가로 962까지 지원 */
+/* 
+@media(max-width:1024px) {
+
+    
+    .wrapper {
+        max-width: 80%;
+        min-width: auto;
+    }
+
+
+    h2 {
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    a {
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    li {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    i {
+        font-size: 1.6rem;
+    }
+
+} */
+
+/* 세로로 전환되기 전까지 간극 채우기 */
+/* 
+@media(max-width:962px) {
+
+
+    .wrapper {
+        max-width: 90%;
+        min-width: auto;
+    }
+
+    h2 {
+        font-size: 3.4rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+    a {
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    li {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+    i {
+        font-size: 1.4rem;
+    }
+
+}
+ */
+
+/* 작은 태블릿 세로 768 ~*/
+/* 
+@media(max-width:768px) {
+
+   
+    :root {
+        --marquee-elements-displayed: 4;
+    }
+
+
+    .insta1 {
+        height: 35%;
+    }
+
+    .insta2 {
+        height: 35%;
+    }
+
+    
+
+    #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .app-text {
+        width: 60%;
+        height: fit-content;
+        margin: 0;
+    }
+
+    .app-img {
+        width: 70%;
+        height: fit-content;
+        margin: 0;
+    }
+
+
+    .my-element {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .my-element2 {
+        max-width: 50%;
+        height: auto;
+    }
+
+
+    
+    #app_detail {
+        gap: 5%;
+    }
+
+    
+    .app_detailImg {
+        width: 35%;
+        height: 35%;
+        margin: auto 0;
+    }
+
+    .dogImg {
+        width: 40%;
+        height: 60%;
+    }
+
+    .device_right {
+        width: 60%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .deviceTxt {
+        width: 50%;
+        margin: 0;
+    }
+
+    .deviceImg {
+        width: 60%;
+        height: fit-content;
+        align-items: center;
+    }
+
+
+    .deviceImg>canvas {
+
+        max-width: 100%;
+
+    }
+
+
+} */
+
+/* 
+@media (max-height:320px) {
+
+    h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    a {
+        font-size: 1rem;
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    li {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    i {
+        font-size: 1rem;
+    }
+
+    .pataImg>img {
+        width: 70%;
+        min-width: auto;
+        max-width: 37.5rem;
+        height: auto;
+    }
+
+
+   
+    .insta1 {
+        height: 50%;
+
+    }
+
+    .insta2 {
+        height: 50%;
+
+    }
+
+
+
+    #app {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .app-text {
+        width: 50%;
+        height: 50%;
+        margin: auto 0;
+    }
+
+    .app-img {
+        width: 50%;
+        height: 50%;
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+        flex-wrap: nowrap;
+    }
+
+
+    .my-element {
+        width: 50%;
+        text-align: center;
+    }
+
+    .my-element2 {
+        width: 50%;
+        text-align: center;
+    }
+
+
+    
+    #app_detail {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+
+    }
+
+    .app_detailImg {
+        width: 50%;
+        height: 50%;
+        margin: auto 0;
+
+    }
+
+    .dogImg {
+        width: calc(100%/3);
+        height: 80%;
+        margin: auto 0;
+    }
+
+    .device_right {
+        width: calc(2*(100%/3));
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .deviceTxt {
+        --width: calc(100%/3);
+        width: 50%;
+        height: fit-content;
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        flex-shrink: 1;
+    }
+
+    .deviceImg {
+        --background-color: antiquewhite;
+        --width: calc(100%/3);
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+
+
+    .deviceImg>canvas {
+
+        border: 0.1rem solid rgba(25, 94, 142, 0.5);
+        max-width: 80%;
+        height: auto;
+        border-radius: 50%;
+
+    }
+
+} */
+
+
+/* 모바일 세로 텍스트 크기 줄임 */
+
+/* 
+@media(max-width:320px) {
+    
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+
+    a {
+        font-size: 1.3rem;
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    li {
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+
+    i {
+        font-size: 1.6rem;
+    } 
+
+    .pataImg>img {
+        width: 70%;
+        min-width: auto;
+        max-width: 37.5rem;
+        height: auto;
+    }
+
+    
+    .insta1 {
+        height: 35%;
+    }
+
+    .insta2 {
+        height: 35%;
+    }
+
+
+    #app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    .app-text {
+        width: 60%;
+        height: fit-content;
+        margin: 0;
+    }
+
+    .app-img {
+        width: 70%;
+        height: fit-content;
+        margin: 0;
+    }
+
+
+    .my-element {
+        max-width: 50%;
+        height: auto;
+    }
+
+    .my-element2 {
+        max-width: 50%;
+        height: auto;
+    }
+
+
+
+    #app_detail {
+        gap: 5%;
+    }
+
+   
+    .app_detailImg {
+        width: 35%;
+        height: 35%;
+        margin: auto 0;
+    }
+
+    .dogImg {
+        width: 40%;
+        height: 60%;
+    }
+
+    .device_right {
+        width: 60%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .deviceTxt {
+        width: 50%;
+        margin: 0;
+    }
+
+    .deviceImg {
+        width: 60%;
+        height: fit-content;
+        align-items: center;
+    }
+
+
+    .deviceImg>canvas {
+
+        max-width: 100%;
+
+    }
+} */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pageable</title>
+    <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="pageable.css">
+    <link href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js" ></script>
+    <script src="pageable.js" defer></script>
+</head>
+<body>
+    
+    <div class="navbar">
+        <ul class="navTest">
+            <li><a href="#page-1" class="nav-link">page1</a></li>
+            <li><a href="#page-2">page2</a></li>
+            <li><a href="#page-3">page3</a></li>
+            <li><a href="#page-4">page4</a></li>
+        </ul>
+
+    </div>
+    <div id="container">
+        <div data-anchor="Page 1"></div>
+        <div data-anchor="Page 2"></div>
+        <div data-anchor="Page 3"></div>
+        <div data-anchor="Page 4"></div>
+        ....
+    </div>
+        
+    <script>
+        // const pages = new Pageable("#container");
+        // pages.on("scroll.end",data=>{
+
+        // });
+    </script>
+    </div>
+</body>
+</html>

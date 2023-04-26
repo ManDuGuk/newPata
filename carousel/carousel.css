@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    padding: 20px;
+    background: #eee;
+    user-select: none;
+
+}
+
+[type=radio]{
+    --display: none;
+}
+
+#slider{
+    height: 35vw;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#slider label{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+
+/* 아래 css들은 생각보다 간단하다. */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+}
+
+/* 
+체크를 가운데에서 왼쪽으로 +1된것이다.
+체크가 왼쪽으로 +1이 되면 원형슬라이드는 오른쪽으로 +1이동한것과 마찬가지이다.
+즉 왼편에 있던 2번 박스가 3번박스를 오른쪽으로 밀어내고 가운데로 오게되는것
+다른 모든 박스들도 그렇게 한칸씩이동시킨다.
+*/
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+/* 
+가운데 있는 체크박스 상자를 기준으로 체크된 상자가 0,0,0의 위치로 오도록 만드는것이다
+체크된 체크와 박스가 일치하면된다.
+*/
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+/* 
+체크를 가운데에서 오른쪽으로 +1된것이다.
+체크가 오른쪽으로 +1이 되면 원형슬라이드는 왼쪽편으로 +1이동한것과 마찬가지이다.
+즉 오른편에 있던 4번 박스가 3번박스를 왼쪽으로 밀어내고 가운데로 오게되는것
+다른 모든 박스들도 그렇게 한칸씩이동시킨다.
+*/
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(15%,0,-100px);
+}
+
+/* 
+체크를 가운데에서 오른쪽으로 +2된것이다.
+체크가 오른쪽으로 +2이 되면 원형슬라이드는 왼쪽편으로 +2이동한것과 마찬가지이다.
+즉 오른편에 있던 4번 박스가 3번박스를 왼쪽으로 2밀어내고 가운데로 오게되는것
+다른 모든 박스들도 그렇게 한칸씩이동시킨다.
+*/
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+
+}

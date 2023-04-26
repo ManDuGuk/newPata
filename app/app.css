@@ -1,0 +1,69 @@
+/* --app시작-- */
+#app {
+    width: 1920px;
+    height: 1080px;
+    background-image: url("../images/appBackground.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+}
+
+#app>div {
+    padding-left: 100px;
+    padding-top: 200px;
+}
+
+#app>div>h2 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 87px;
+    margin-bottom: 100px;
+}
+
+#app>div>h2::after {
+    content: "";
+    display: block;
+    width: 350px;
+    border-bottom: 5px solid #FFD869;
+}
+
+#app>div>ul>li {
+    background-image: url("../images/listPaw.png");
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.appImgs {
+    width: 100%;
+    padding-left: 0px;
+    
+}
+
+.appImgs div{
+    display: inline-block;
+}
+
+/* --app끝 */
+
+.my-element {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: headShake;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}
+
+.my-element2 {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: fadeInRight;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
+    /* don't forget to set a duration! */
+}

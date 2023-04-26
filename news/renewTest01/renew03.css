@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/*
+ 페이지가 스크롤 되지 않고 딱 맞춰서 나와주게 하기위해
+해당처리가 필요하다.
+아래 처리없이 그냥 테스트해보면 html이 body영역과 다르게 일정영역을 잡아먹고 있음을 알수있다.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+기본 폰트 사이즈는 16px이다. 이를 10px로 변환시켜(그냥 font-size를 10px이라고하면 고정되어버린다.)
+rem를 변하게 쓰기위한 세팅을 해준다.
+*/
+html{
+    background-color: black;
+    font-size: 62.5%;
+}
+
+/* 바디영역을 애초에 작게 설정해 가운데로 중앙정렬했다. */
+body {
+    min-height: 100vh;
+    max-width: 70vw;
+    margin: 0 auto;
+    background-color: white;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------- */
+
+/* --news시작 */
+#news {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.insta1 {
+    height: 50%;
+    background-color: #FFDC7B1A;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.instaTxts {
+    height: 50%;
+    margin: auto 0;
+}
+
+.instaTxt1 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+.instaTxt2 {
+    font-weight: 400;
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+}
+
+.instaTxt3 {
+    background-color: #67CAD5;
+    border-radius: 2.8rem;
+    border: 0.1rem solid black;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 1.3rem;
+    padding: 1.6rem 3.1rem;
+    text-decoration: none;
+    text-shadow: 0rem 0.1rem 0rem black;
+}
+
+.instaimg{
+    height: 70%;
+    margin:auto 0;
+}
+
+.insta1 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.insta2{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+}
+
+.insta2 p {
+    --height: 10%;
+    font-weight: 400;
+    font-size: 1.8rem;
+  
+}
+
+.insta2 ul{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.insta2 li{
+    width: 25%;
+    height: 75%;
+}
+
+
+.flip-card-container{
+    width: 100%;
+    max-width: 30rem;
+    height: 100%;
+    max-height: 30rem;
+    --border: 1px solid #ccc;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.flip-card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-container:hover .flip-card{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,.flip-card-back{
+    border: 1 black;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --font-size: 2rem;
+}
+
+.flip-card-front{
+    --background-color: #333;
+    --color:#fff;
+}
+
+.flip-card-back{
+
+    background-color: #517fa4;
+    border-radius: 10px;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img{
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.flip-card-back p{
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.4rem;
+    line-height: 1,5rem;
+}
+
+.flip-card-back p span{
+    display:block;
+    font-size:1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 1.25rem;
+}

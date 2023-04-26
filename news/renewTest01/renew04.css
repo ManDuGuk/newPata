@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/*
+ 페이지가 스크롤 되지 않고 딱 맞춰서 나와주게 하기위해
+해당처리가 필요하다.
+아래 처리없이 그냥 테스트해보면 html이 body영역과 다르게 일정영역을 잡아먹고 있음을 알수있다.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+기본 폰트 사이즈는 16px이다. 이를 10px로 변환시켜(그냥 font-size를 10px이라고하면 고정되어버린다.)
+rem를 변하게 쓰기위한 세팅을 해준다.
+*/
+html{
+    background-color: black;
+    font-size: 62.5%;
+}
+
+/* 바디영역을 애초에 작게 설정해 가운데로 중앙정렬했다. */
+body {
+    min-height: 100vh;
+    max-width: 70vw;
+    margin: 0 auto;
+    background-color: white;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------- */
+
+
+/* --app시작-- */
+#app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.app-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    --align-items: center;
+    flex-shrink: 1;
+    gap: 5%;
+
+    position: relative;
+    left: 10%;
+    bottom: 20%;
+}
+.app-text>h2 {
+    font-weight: 600;
+    font-size: 3.2rem;
+    --line-height: 87px;
+    --margin-bottom: 100px;
+    white-space: nowrap;
+}
+
+.app-text>h2::after {
+    content: "";
+    display: block;
+    width: 350px;
+    border-bottom: 5px solid #FFD869;
+}
+
+.app-text>ul>li {
+    background-image: url("../images/listPaw.png");
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    --line-height: 33px;
+}
+
+.app-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    --white-space: nowrap;
+
+    position: relative;
+    right: 10%;
+}
+
+.my-element {
+    width: 50%;
+    text-align: center;
+}
+
+.my-element img{
+    max-width: 70%;
+    height: auto;
+}
+.my-element2{
+    width: 50%;
+    text-align: center;
+}
+
+.my-element2 img{
+    max-width: 90%;
+    height: auto;
+}
+
+/* --app끝 */

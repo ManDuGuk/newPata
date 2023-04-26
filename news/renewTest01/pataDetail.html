@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pataDetail</title>
+
+    <link rel="stylesheet" type="text/css" href="renewTest01.css">
+
+    <!-- 구글 폰트 noto-sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- aos효과 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- pageable -->
+    <link href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app_detail" class="wrapper">
+        <!-- 네비바 -->
+        <div class="detail_nav" data-aos="slide-right">
+
+            <ul>
+                <li>
+                    <a href="#">인삿말</a>
+                </li>
+                <li>
+                    <a href="#">사업영역</a>
+                </li>
+                <li>
+                    <a href="#">연혁</a>
+                </li>
+                <li>
+                    <a href="#">contact</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- 본 컨텐츠 -->
+        <div class="detail_contents">
+            <div class="contents_top" data-aos="slide-down">
+                <!--
+                <div class="move_txt">
+                    <img src="../images/Mask group.png">
+                </div>
+                -->
+                <h2>
+                    펫터의 기본이 됩니다.</h2>
+                <p>since 1979</p>
+                <p>
+                    펫터 케미칼은 세계최고 수준의 R&D역량과 전략적 제휴를 기반으로<br>
+                    세계 최소 수준의 강아지 기업으로 거듭나고 있습니다.
+                </p>
+            </div>
+            <div class="contents_bottom" data-aos="fade-left">
+                <!-- 이미지 -->
+                <div class="bottom_left">
+                    <img src="../images/dog yellow.png">
+                </div>
+                <!-- 텍스트 -->
+                <div class="bottom_right">
+                    <h2>world Leading pet device company</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur aliquid natus laboriosam non
+                        eveniet accusantium cupiditate molestias aperiam illum iure ab cumque, tempore debitis! Itaque
+                        minima odit in sed. Consequuntur!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pageable -->
+    <script>
+        new Pageable("#container", {
+            animation: 1000,
+            freeScroll: true
+        });
+    </script>
+
+    <!-- aos 자바 스크립트 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 0,
+            duration: 1500
+        });
+    </script>
+
+    <!-- aos, pageable 충돌해결 -->
+    <script>
+        document.addEventListener('scroll', (event) => {
+            const aosAnimation = document.querySelectorAll('[data-aos]');
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio > 0) {
+                        entry.target.classList.add('aos-animate');
+                    } else {
+                        entry.target.classList.remove('aos-animate');
+                    }
+                });
+            });
+            aosAnimation.forEach(aosObject => {
+                observer.observe(aosObject);
+            });
+        }, { capture: true, passive: true, })
+
+
+    </script>
+</body>
+
+</html>

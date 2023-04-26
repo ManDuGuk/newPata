@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container01 {
+            color: #999;
+            text-transform: uppercase;
+            font-size: 36px;
+            font-weight: bold;
+            padding-top: 200px;
+            width: 100%;
+            display: block;
+        }
+
+        #flip {
+            height: 50px;
+            overflow: hidden;
+
+        }
+
+        /* hidden을 해줘야 모든 텍스트가 보여지는 것이숨김이 되어 정해진 높이만큼만 보여집니다. */
+
+        #flip>div>div {
+            color: #fff;
+            padding: 4px 12px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: inline-block;
+        }
+
+        #flip div:first-child {
+            animation: show 5s linear infinite;
+        }
+
+        #flip div div {
+            background: #42c58a;
+        }
+
+        #flip div:first-child div {
+            background: #4ec7f3;
+        }
+
+        #flip div:last-child div {
+            background: #DC143C;
+        }
+
+        /* 가장 중요한 키프레임 값.
+0~100까지 텍스트의 움직임을 margin으로 조정해줍니다.
+위에서 아래로 변화가 생기도록 margin-top으로 하였습니다 */
+        @keyframes show {
+            0% {
+                margin-top: -270px;
+            }
+
+            5% {
+                margin-top: -180px;
+            }
+
+            33% {
+                margin-top: -180px;
+            }
+
+            38% {
+                margin-top: -90px;
+            }
+
+            66% {
+                margin-top: -90px;
+            }
+
+            71% {
+                margin-top: 0px;
+            }
+
+            99.99% {
+                margin-top: 0px;
+            }
+
+            100% {
+                margin-top: -270px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id=container01>
+        Make
+        <div id=flip>
+            <div>
+                <div>누구나</div>
+            </div>
+            <div>
+                <div>쉽게 배우는</div>
+            </div>
+            <div>
+                <div>생활코딩</div>
+            </div>
+        </div>
+        TRY!
+    </div>
+</body>
+
+</html>

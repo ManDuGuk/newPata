@@ -1,0 +1,98 @@
+/* --공통 */
+
+html {
+    /*  smooth-wrap처리를 하면 div를 기준으로 처리가 되기때문에 html상의 스크롤 ui는 숨김처리 해준다. */
+    overflow: auto;
+
+    /* 이건 링크를 타고 날아갈시 부드럽게 전환되도록 해주는 효과이다. 자세한건 코딩저니 영상 참조 */
+    --scroll-behavior: smooth;
+}
+
+/* 폰트 */
+h2 {
+    font-family: 'Gowun Batang', serif;
+}
+
+/* 공통-- */
+
+
+/* --device시작-- */
+#device {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    background-color: #F8F8F8;
+}
+
+.dogImg {
+    width: 35%;
+}
+
+.dogImg>img {
+    height: 1080px;
+}
+
+.deviceImg {
+    height: 100%;
+    width: 35%;
+}
+
+.deviceTxt {
+
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 300px;
+}
+
+.deviceTxt>div>h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    padding-bottom: 30px;
+}
+
+.deviceTxt>div>p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    padding-bottom: 30px;
+}
+
+.verticalTxt {
+    display: flex;
+    gap: 20px;
+}
+
+.verticalTxt>li {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-weight: 700;
+    font-size: 24px;
+    padding-top: 300px+50px;
+
+}
+
+.verticalTxt>.vT1 {
+    text-indent: 4rem;
+}
+
+.verticalTxt>.vT2 {
+    text-indent: 7rem;
+}
+
+.verticalTxt>.vT3 {
+    text-indent: 10rem;
+}
+
+.deviceImg>canvas {
+    border-radius: 50%;
+    text-align: center;
+    width:400px;
+    height:400px;
+    margin-left: 20%;
+    margin-top: 80%;
+}
+
+/* --device끝 */

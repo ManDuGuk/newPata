@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/*
+ 페이지가 스크롤 되지 않고 딱 맞춰서 나와주게 하기위해
+해당처리가 필요하다.
+아래 처리없이 그냥 테스트해보면 html이 body영역과 다르게 일정영역을 잡아먹고 있음을 알수있다.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+기본 폰트 사이즈는 16px이다. 이를 10px로 변환시켜(그냥 font-size를 10px이라고하면 고정되어버린다.)
+rem를 변하게 쓰기위한 세팅을 해준다.
+*/
+html{
+    background-color: black;
+    font-size: 62.5%;
+}
+
+/* 바디영역을 애초에 작게 설정해 가운데로 중앙정렬했다. */
+body {
+    min-height: 100vh;
+    max-width: 70vw;
+    margin: 0 auto;
+    background-color: white;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------- */
+
+/* pc 1920해상도 기준 */
+
+/* 일반적인 타이틀의 크기는 18px~32px
+    본문사이즈는 12px~16px
+    웹에서 잘 읽히는 최소 사이즈는 13px이라고 한다. */
+
+/* --navbar */
+
+.navbar{
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    height: 5vh;
+    max-height: 5rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+
+.navbar div{
+    width: 50%;
+    vertical-align: middle;
+}
+
+.navbar ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.navbar ul li a{
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+
+.logo img {
+    height: 1.8rem;
+}
+
+/* navbar-- */
+
+/* --컨텐츠 */
+h2 {
+    font-size: 1.8rem;
+}
+
+.move{
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    justify-content: center;
+}
+
+.title {
+  
+    color: black;
+    text-align: center;
+   
+}
+
+.title_img{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title_img img{
+    width: 10%;
+    max-width: 50rem;
+    min-width: 20rem;
+
+    --max-width: 50%;
+    height: fit-content;
+    
+}
+
+/* 컨텐츠-- */
+
+
+/* PC FHD 이하  (해상도 1280px ~ , )*/
+/* 미디어 쿼리에 적용되는 rem은 16px을 기준으로 적용된다. 왜그런지는 잘 모르겠다. */
+
+/* @media all and (min-width:1270px) and (max-width:1919px) {
+    .section_wrap {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+} */
+
+/* PC FHD 이상  (해상도 1920px ~ , )*/
+
+/* @media all and (min-width:1921px) {
+    .section_wrap {
+        width: 100vw;
+        height: 100vh;
+    }
+} */
+
+
+/* 반응형-- */

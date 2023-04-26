@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="aniwheel.css">
+
+    <style>
+        #wrapper {
+            --background: black;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+        }
+
+        html {
+            overflow: hidden;
+        }
+    </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="aniwheel.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#wrapper").smoothWheel()
+        });
+
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+   
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div class="section" id="section1">
+            <div id="hello">
+                <header>
+                    <div class="header_wrap">
+                        <div id="logo">
+                            <a href="index.html">
+                                <img src="images/Vector.png" alt="logo">
+                            </a>
+                        </div>
+                        <nav>
+                            <ul class="header_titles">
+                                <li>pata</li>
+                                <li>app</li>
+                                <li>device</li>
+                                <li>contact</li>
+                                <li>language</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </header>
+                <main>
+                    <h2 class="mainTxt">
+                        <div>
+                            함께가는 동반자 당신을 위한 최고의 선택 펫터가 함께합니다.
+                        </div>
+                        <div>
+                            Lorem 1
+                        </div>
+                        <div>
+                            Lorem 2
+                        </div>
+                    </h2>
+                    <div class="mainHand">
+                        <img src="images/mainHand.png" alt="사람손강아지손">
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div id="pata">
+                <div class="section1">
+                    <div data-aos="fade-in">
+                        <h2 class="pataTxt1">what is</h2>
+                    </div>
+                    <div class="pataImg">
+                        <img src="images/Vector2.png" alt="pataImg">
+                    </div>
+                    <p class="pataTxt2">
+                        동반자를 위한 반려견 솔루션
+                    </p>
+                </div>
+                <div class="section2">
+
+                    <div>
+
+                        <div>
+                            <img src="images/슬1.png" alt="pataMvImg">
+                        </div>
+                        <div>
+                            <img src="images/슬2.png" alt="pataMvImg">
+                        </div>
+                        <div>
+                            <img src="images/슬3.png" alt="pataMvImg">
+                        </div>
+
+
+                        <div>
+                            <img src="images/슬4.png" alt="pataMvImg">
+                        </div>
+                        <div>
+                            <img src="images/슬5.png" alt="pataMvImg">
+                        </div>
+                        <div>
+                            <img src="images/슬6.png" alt="pataMvImg">
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section3"></div>
+        <div class="section" id="section4"></div>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

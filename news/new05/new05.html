@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new05</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="new05.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+              "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+              "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
+              "OrbitControls" : "https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+            }
+          }
+    </script>
+    <script src="new05.js" type="module" defer></script>
+</head>
+<body>
+    <!-- --device -->
+    <div id="device">
+        <div class="dogImg">
+            <img src="../images/deviceDogImg.png" alt="deviceDogImg">
+        </div>
+        <div class="deviceTxt">
+            <div>
+                <h2>
+                    H5<br>
+                    VAPOUR
+                </h2>
+                <p>
+                    c250
+                </p>
+                <p>
+                    buynow
+                </p>
+            </div>
+            <div>
+                <ul class="verticalTxt">
+                    <li class="vT1">목걸이</li>
+                    <li class="vT2">목걸이 새거</li>
+                    <li class="vT3">목걸이 새로글자</li>
+                </ul>
+            </div>
+        </div>
+        <div class="deviceImg">
+            <canvas id="canvas" width="1000" height="1000"></canvas>
+        </div>
+    </div>
+    <!-- device-- -->
+</body>
+</html>

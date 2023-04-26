@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new04</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="new04.css">
+</head>
+<body>
+    <div id="app">
+        <div class="app-text">
+            <h2>
+                반려견의 건강<br>
+                스마트하게 확인하세요
+            </h2>
+
+            <ul>
+                <li>turn tables quicker</li>
+                <li>increase average spend</li>
+                <li>get more tips</li>
+                <li>save time,save money</li>
+            </ul>
+        </div>
+        <div class="app-img">
+            <div class="my-element card">
+                <img src="../images/appImg1.png" alt="appImg1">
+
+            </div>
+            <div class="my-element2 card">
+                <img src="../images/appImg2.png" alt="appImg2">
+
+            </div>
+        </div>
+    </div> 
+
+    <!-- <div class="card"></div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+            max: 25,
+            speed: 400,
+            scale:1.2
+
+        });
+    </script>
+</body>
+</html>

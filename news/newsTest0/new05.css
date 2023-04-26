@@ -1,0 +1,80 @@
+/* --device시작-- */
+#device {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    background-color: #F8F8F8;
+}
+
+.dogImg {
+    width: 35%;
+}
+
+.dogImg>img {
+    height: 1080px;
+}
+
+.deviceImg {
+    height: 100%;
+    width: 35%;
+}
+
+.deviceTxt {
+
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 300px;
+}
+
+.deviceTxt>div>h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    padding-bottom: 30px;
+}
+
+.deviceTxt>div>p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    padding-bottom: 30px;
+}
+
+.verticalTxt {
+    display: flex;
+    gap: 20px;
+}
+
+.verticalTxt>li {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-weight: 700;
+    font-size: 24px;
+    padding-top: 300px+50px;
+
+}
+
+.verticalTxt>.vT1 {
+    text-indent: 4rem;
+}
+
+.verticalTxt>.vT2 {
+    text-indent: 7rem;
+}
+
+.verticalTxt>.vT3 {
+    text-indent: 10rem;
+}
+
+.deviceImg>canvas {
+    border-radius: 50%;
+    text-align: center;
+    width:400px;
+    height:400px;
+    margin-left: 20%;
+    margin-top: 80%;
+}
+
+/* --device끝 */

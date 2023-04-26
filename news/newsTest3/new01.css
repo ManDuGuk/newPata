@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* 문제점이 div가 화면을 다 덮어버리면 컨트롤 마우스 휠을 통한 화면조절이 안된다. div 밖으로 나가야지만 먹히네
+두번째 문제점은 스크롤을 하고 나서 빠르게 전환하기 위해 스크롤 ui를 직접끌어서 움직일시 선입력된 휠애니메이션이 끝나기 전까지는 클릭이 되지않는다.
+*/
+.smooth-wrap {
+
+    width: 100vw;
+    height: 100vh;
+    --width: 500px;
+    --height: 500px;
+    /* div상의 휠 ui를 표시해준다. */
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+
+/* --공통 */
+
+html {
+    /*  smooth-wrap처리를 하면 div를 기준으로 처리가 되기때문에 html상의 스크롤 ui는 숨김처리 해준다. */
+    overflow: auto;
+
+    /* 이건 링크를 타고 날아갈시 부드럽게 전환되도록 해주는 효과이다. 자세한건 코딩저니 영상 참조 */
+    --scroll-behavior: smooth;
+}
+
+/* 폰트 */
+h2 {
+    font-family: 'Gowun Batang', serif;
+}
+
+/* 공통-- */
+
+/* --헤더시작-- */
+#hello {
+    width: 1920px;
+    height: 1080px;
+    background: rgba(255, 205, 66, 0.7);
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+
+#logo {
+    padding-left: 50px;
+}
+
+#logo>a>img {
+    width: 100px;
+}
+
+
+
+.header_titles {
+    display: flex;
+    padding-right: 50px;
+    align-items: center;
+
+}
+
+.header_titles>li {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 400;
+    font-size: 24px;
+    --line-height: 35px;
+}
+
+/* --헤더끝-- */
+
+/* --몸통시작-- */
+/* --indext시작-- */
+.mainTxt {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    margin-top: 150px;
+    --margin-bottom: 100px;
+}
+
+.mainHand {
+    width: 100%;
+    display: flex;
+}
+
+.mainHand img{
+    width: 100%;
+}
+
+
+
+
+
+/* --index끝-- */

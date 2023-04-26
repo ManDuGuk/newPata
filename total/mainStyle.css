@@ -1,0 +1,575 @@
+@charset "utf-8";
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* 폰트 */
+h2{
+    font-family: 'Gowun Batang', serif;
+}
+
+/* --헤더시작-- */
+#hello {
+    width: 1920px;
+    height: 1080px;
+    background: rgba(255, 205, 66, 0.7);
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    
+}
+
+#logo {
+    padding-left: 50px;
+}
+
+#logo>a>img {
+    width: 100px;
+}
+
+
+
+.header_titles {
+    display: flex;
+    padding-right: 50px;
+    align-items: center;
+    
+}
+
+.header_titles>li {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: 400;
+    font-size: 24px;
+    --line-height: 35px;
+}
+
+/* --헤더끝-- */
+
+/* --몸통시작-- */
+/* --indext시작-- */
+.mainTxt {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.mainHand {
+    width: 100%;
+}
+
+/* --index끝-- */
+/* --pata시작 */
+#pata {
+    width: 1920px;
+    height: 1080px;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: row;
+}
+
+.section1 {
+    width: 60%;
+    height: 1080px;
+    display: flex;
+    padding: 0px;
+    gap: 150px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.pataTxt1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 124px;
+    color: #1A5F8F;
+}
+
+.pataImg>img {
+    width: 818px;
+    height: 227px;
+}
+
+.pataTxt2 {
+    font-weight: 400;
+    font-size: 64px;
+}
+
+.section2 {
+    width: 40%;
+    display: flex;
+    gap: 40px;
+}
+
+
+/* --pata끝 */
+/* --news시작 */
+#news {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+}
+
+.insta1 {
+
+    display: flex;
+    height: 50%;
+    background-color: #FFDC7B1A;
+    padding-left: 300px;
+    padding-top: 100px;
+    gap: 174px;
+
+}
+
+.instaTxts {
+    padding-top: 100px;
+}
+
+.instaTxt1 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+.instaTxt2 {
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.instaTxt3 {
+    background-color: #67CAD5;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.insta2 {
+    margin-left: 300px;
+    height: 50%;
+}
+
+.insta2>h2 {
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* --news끝 */
+/* --app시작-- */
+#app {
+    width: 1920px;
+    height: 1080px;
+    background-image: url("images/appBackground.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+}
+
+#app>div {
+    padding-left: 100px;
+    padding-top: 200px;
+}
+
+#app>div>h2 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 87px;
+    margin-bottom: 100px;
+}
+
+#app>div>h2::after {
+    content: "";
+    display: block;
+    width: 350px;
+    border-bottom: 5px solid #FFD869;
+}
+
+#app>div>ul>li {
+    background-image: url("images/listPaw.png");
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+#app>.appImgs {
+    padding-left: 0px;
+}
+
+/* --app끝 */
+/* --device시작-- */
+#device {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    background-color: #F8F8F8;
+}
+
+.dogImg {
+    width: 35%;
+}
+
+.dogImg>img {
+    height: 1080px;
+}
+
+.deviceImg {
+
+    width: 35%;
+}
+
+.deviceTxt {
+
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 300px;
+}
+
+.deviceTxt>div>h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    padding-bottom: 30px;
+}
+
+.deviceTxt>div>p {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    padding-bottom: 30px;
+}
+
+.verticalTxt {
+    display: flex;
+    gap: 20px;
+}
+
+.verticalTxt>li {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-weight: 700;
+    font-size: 24px;
+    padding-top: 300px+50px;
+
+}
+
+.verticalTxt>.vT1 {
+    text-indent: 4rem;
+}
+
+.verticalTxt>.vT2 {
+    text-indent: 7rem;
+}
+
+.verticalTxt>.vT3 {
+    text-indent: 10rem;
+}
+
+.deviceImg>img {
+    display: block;
+    padding-top: 500px;
+    padding-left: 50px;
+}
+
+/* --device끝 */
+/* --contact시작 */
+#contact {
+    width: 1920px;
+    height: 1080px;
+}
+
+.contactTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+
+}
+
+.contactTitle>h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+}
+
+.contactTitle>p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.input_wrap {
+    width: 1600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20%;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.input_wrap>div {
+    width: 40%;
+    padding-bottom: 20px;
+
+}
+
+.input_wrap>.contents {
+    width: 100%;
+}
+
+.input_wrap>.contents>textarea {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 10px;
+}
+
+.input_wrap>div>label {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+
+}
+
+.input_wrap>div>input {
+    width: 100%;
+    height: 50px;
+
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 10px;
+}
+
+.input_wrap>input {
+    color: white;
+    background: #195E8E;
+    border-radius: 10px;
+    width: 200px;
+    height: 49px;
+}
+
+/* --contact끝 */
+/* --pata_detail시작 */
+#pata_detail {
+
+    width: 1920px;
+    height: 1080px;
+
+    background-image: url("images/detail_background.png");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+
+}
+
+.detail_wrap {
+
+    height: 1080px;
+    display: flex;
+
+}
+
+.detail_wrap>ul {
+
+    width: 30%;
+    text-align: center;
+    padding-top: 15%;
+}
+
+.detail_wrap>ul>li {
+    padding: 20px;
+}
+
+.detail_wrap>div {
+    --background-color: #195E8E;
+
+    width: 70%;
+}
+
+.detail_wrap>ul>li {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.detail_title>h2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 93px;
+    padding-bottom: 20px;
+}
+
+.detail_title>.t1 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    padding-bottom: 20px;
+}
+
+.detail_title>.t2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    padding-bottom: 150px;
+}
+
+.detailTxt_wrap {
+    display: flex;
+    gap: 5%;
+}
+
+.detailTxt_wrap>div>h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+
+}
+
+.detailTxt_wrap>div>p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+/* --pata_detail끝 */
+/* --app_detail시작 */
+#app_detail {
+    width: 1920px;
+    height: 1080px;
+
+}
+
+.app_detail_wrap {
+    width: 1600px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.app_detailTxt {
+    width: 50%;
+
+    padding-top: 20%;
+}
+
+
+.app_detailTxt>h2 {
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 70px;
+    width: 60%;
+    --text-align: center;
+    margin: 0 auto;
+}
+
+.app_detailTxt>p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    width: 60%;
+    --text-align: center;
+    margin: 0 auto;
+
+}
+
+.app_detailImg {
+    width: 50%;
+    padding-top: 15%;
+}
+
+.app_detailImg>img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* --app_detail끝 */
+/* --device_detail시작 */
+#device_detail {
+    width: 1920px;
+    height: 1080px;
+
+}
+
+.device_detailTop {
+    height: 50%;
+    background: rgba(255, 220, 123, 0.1);
+
+}
+
+.device_detail_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.device_detail_wrap>p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.device_detail_wrap>h2 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 70px;
+}
+
+
+.device_detail_wrap>ul {
+    text-align: center;
+}
+
+.device_detail_wrap>ul>li {
+    display: inline;
+}
+
+.device_detail_wrap>ul>li>a {
+    text-decoration: none;
+}
+
+.device_detailBottom {
+    height: 50%;
+}
+
+.device_detail_wrap2 {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.device_detail_wrap2>ul>li {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+.device_detail_wrap2>ul>li>div {
+    text-align: center;
+}
+
+.device_detail_wrap2>ul>li>div>p {
+    padding: 20px 0;
+}
+
+/* --device_detail끝 */
+
+/* --몸통끝 */
